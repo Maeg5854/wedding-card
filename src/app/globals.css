@@ -13,7 +13,19 @@
 @font-face {
   font-family: "SeoulHangangCL";
   font-weight: 50;
-  src: "/fonts/SeoulHangangCL.ttf" format("truetype");
+  src: url("/fonts/SeoulHangangCL.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SeoulNamsanCB";
+  font-weight: 50;
+  src: url("/fonts/SeoulNamsanCB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SeoulHangangCB";
+  font-weight: 50;
+  src: url("/fonts/SeoulHangangCB.ttf") format("truetype");
 }
 
 html,
