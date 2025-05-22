@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Letter = () => {
   return (
-    <>
+    <div>
       <Saying>{`"그러므로 하나님이 짝지어 주신 것을
 사람이 나누지 못할지니라 하시더라"(막10:9) `}</Saying>
       <br />
@@ -11,7 +11,7 @@ export const Letter = () => {
         {`하나님 안에서 하나되는 첫 시작의 날,
 귀한 걸음으로 축복해주시면 더 없는 기쁨으로 간직하겠습니다.`}
       </LetterContents>
-    </>
+    </div>
   );
 };
 
