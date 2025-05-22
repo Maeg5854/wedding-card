@@ -22,6 +22,12 @@
   src: url("/fonts/SeoulNamsanCB.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "SeoulHangangCB";
+  font-weight: 50;
+  src: url("/fonts/SeoulHangangCB.ttf") format("truetype");
+}
+
 html,
 body {
   max-width: 100vw;
