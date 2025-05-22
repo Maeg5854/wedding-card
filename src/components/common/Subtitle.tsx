@@ -6,6 +6,7 @@ const Subtitle = ({ text }: { text: string }) => {
 };
 
 const HrSect = styled.div`
+  width: 195px;
   display: flex;
   flex-basis: 100%;
   align-items: center;
