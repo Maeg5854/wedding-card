@@ -11,7 +11,7 @@ const HrSect = styled.div`
   align-items: center;
   color: #000000;
   font-family: "SeoulHangangCL";
-  font-size: 15px;
+  font-size: 12px;
   margin: 8px 0px;
 
   &::before,
