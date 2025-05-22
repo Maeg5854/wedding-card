@@ -12,13 +12,17 @@
     "@types/styled-components": "^5.1.34",
     "next": "15.3.2",
     "react": "^19.0.0",
+    "react-collapse": "^5.1.1",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@kunukn/react-collapse": "^3.0.15",
     "@types/node": "^20",
     "@types/react": "^19",
+    "@types/react-collapse": "^5.0.4",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
