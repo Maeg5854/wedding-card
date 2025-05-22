@@ -31,10 +31,10 @@ const CollapsibleList = ({
         <CollapsibleContent>
           {Array.isArray(children)
             ? children.map((child, index) => (
-                <>
+                <div key={index}>
                   {child}
                   {index !== children.length - 1 && child && <HorizontalLine />}
-                </>
+                </div>
               ))
             : children}
         </CollapsibleContent>
