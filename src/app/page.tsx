@@ -1,10 +1,18 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Invitation from "@/components/Invitation";
+import Date from "@/components/Date";
+import Location from "@/components/Location";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <ToastContainer />
       <main className={styles.main}>
+        <Invitation />
+        <Date />
+        <Location />
         <Image
           className={styles.logo}
           src="/next.svg"
