@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.34",
+    "dayjs": "^1.11.13",
     "next": "15.3.2",
     "react": "^19.0.0",
+    "react-calendar": "^5.1.0",
     "react-collapse": "^5.1.1",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
