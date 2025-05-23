@@ -1,16 +1,13 @@
 "use client";
-import { useRef } from "react";
+
+import { Map } from "react-kakao-maps-sdk";
 
 export default function LocationMap() {
-  const mapRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   if (window.kakao) {
-  //     const map = new window.kakao.maps.Map(mapRef.current, {
-  //       center: new window.kakao.maps.LatLng(37.566826, 126.9786567),
-  //       level: 3,
-  //     });
-  //   }
-  // }, [env.kakao]);
-  return <div ref={mapRef}></div>;
+  return (
+    <Map
+      center={{ lat: 37.566826, lng: 126.9786567 }}
+      style={{ width: "500px", height: "300px", border: "1px solid black" }}
+      level={3}
+    />
+  );
 }
