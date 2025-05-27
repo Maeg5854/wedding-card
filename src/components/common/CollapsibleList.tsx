@@ -3,6 +3,7 @@ import { Collapse } from "@kunukn/react-collapse";
 import { styled } from "styled-components";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
+import { HorizontalLine } from "./HorizontalLine";
 
 const CollapsibleList = ({
   title,
@@ -74,12 +75,6 @@ const CollapsibleContent = styled.div`
   border: 1px solid #d9d9d9;
   border-top: none;
   border-radius: 0 0 15px 15px;
-`;
-
-const HorizontalLine = styled.hr`
-  border-top: 1px solid #e3e3e3;
-  border-bottom: none;
-  margin: 13px 0;
 `;
 
 export default CollapsibleList;

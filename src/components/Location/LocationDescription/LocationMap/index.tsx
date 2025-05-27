@@ -1,16 +1,37 @@
 "use client";
-import { useRef } from "react";
+
+import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 export default function LocationMap() {
-  const mapRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   if (window.kakao) {
-  //     const map = new window.kakao.maps.Map(mapRef.current, {
-  //       center: new window.kakao.maps.LatLng(37.566826, 126.9786567),
-  //       level: 3,
-  //     });
-  //   }
-  // }, [env.kakao]);
-  return <div ref={mapRef}></div>;
+  const position = { lat: 37.5427105, lng: 126.9516296 };
+  return (
+    <Map
+      center={position}
+      style={{
+        width: "100%",
+        height: "300px",
+        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)",
+      }}
+      level={3}
+    >
+      <MapMarker position={position}>
+        <div
+          style={{
+            color: "#000000",
+            fontFamily: "SeoulNamsanCB",
+            padding: "10px",
+            paddingLeft: "35px",
+            borderRadius: "10px",
+            width: "100%",
+            fontSize: "14px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          아펠가모 공덕
+        </div>
+      </MapMarker>
+    </Map>
+  );
 }

@@ -16,6 +16,7 @@ export default function WeddingDateCalendar() {
       <Calendar
         value={weddingDate.toDate()}
         formatDay={(locale, date) => date.getDate().toString()}
+        locale="ko"
         showNavigation={false}
         selectRange={false}
         showNeighboringMonth={false}
