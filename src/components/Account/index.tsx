@@ -51,7 +51,7 @@ const GroomAccounts = () => {
       {accounts.map((account, index) => (
         <AccountItem
           key={index}
-          bank={account.accountBank}
+          bank={account.accountBank ?? ""}
           accountNumber={account.accountNumber ?? ""}
           accountOwner={account.accountOwner ?? ""}
           position={account.position}
