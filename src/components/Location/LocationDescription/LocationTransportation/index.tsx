@@ -24,14 +24,13 @@ export function LocationTransportation() {
   return (
     <div>
       {transportations.map((transportation, index) => (
-        <>
+        <div key={index}>
           <LocationTransportaionItem
-            key={transportation.title}
             title={transportation.title}
             descriptions={transportation.description}
           />
           {index !== transportations.length - 1 && <HorizontalLine />}
-        </>
+        </div>
       ))}
     </div>
   );
