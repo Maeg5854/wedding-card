@@ -5,6 +5,7 @@ import Date from "@/components/Date";
 import Location from "@/components/Location";
 import { ToastContainer } from "react-toastify";
 import { Notice } from "@/components/Notice";
+import Account from "@/components/Account";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Date />
         <Location />
         <Notice />
+        <Account />
         <Image
           className={styles.logo}
           src="/next.svg"
