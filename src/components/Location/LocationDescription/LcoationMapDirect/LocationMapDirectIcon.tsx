@@ -17,10 +17,10 @@ export function LocationMapDirectIcon({ map }: { map: LocationMapDirectDvcd }) {
       <Link
         href={
           (map == LocationMapDirectDvcd.KAKAO
-            ? process.env.KAKAO_MAP_URL
+            ? process.env.NEXT_PUBLIC_KAKAO_MAP_URL
             : map == LocationMapDirectDvcd.NAVER
-            ? process.env.NAVER_MAP_URL
-            : process.env.T_MAP_URL) || "https://map.kakao.com/"
+            ? process.env.NEXT_PUBLIC_NAVER_MAP_URL
+            : process.env.NEXT_PUBLIC_T_MAP_URL) || "https://map.kakao.com/"
         }
         target="_blank"
       >
