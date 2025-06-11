@@ -109,6 +109,7 @@ export default function PhotoAlbum() {
           startIndex={galleryInput.findIndex(
             (photo) => photo.src === selectedPhoto?.src
           )}
+          infinite={true}
         />
       </Modal>
     </div>
