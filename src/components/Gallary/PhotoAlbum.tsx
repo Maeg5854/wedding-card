@@ -89,7 +89,11 @@ export default function PhotoAlbum() {
             zIndex: "1000",
           }}
         >
-          <IoIosClose size={20} color="white" />
+          <IoIosClose
+            size={"100%"}
+            color="white"
+            style={{ filter: "drop-shadow(2px 2px 2px rgba(0,0,0,0.3))" }}
+          />
         </ModalCloseButton>
         <ImageGallery
           items={galleryInput.map((photo) => ({
@@ -216,8 +220,8 @@ const ModalCloseButton = styled.button`
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 5vw;
   background: transparent;
   border: none;
   cursor: pointer;
