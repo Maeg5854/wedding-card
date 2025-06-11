@@ -5,14 +5,25 @@ import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { useEffect, useState } from "react";
 import { ColumnsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/columns.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 import styled from "styled-components";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp, IoIosClose } from "react-icons/io";
+import ImageGallery from "react-image-gallery";
 
 export default function PhotoAlbum() {
   const [albumInput, setAlbumInput] = useState<
     { src: string; width: number; height: number }[]
   >([]);
+  const [galleryInput, setGalleryInput] = useState<
+    { src: string; width: number; height: number }[]
+  >([]);
+  const [selectedPhoto, setSelectedPhoto] = useState<{
+    src: string;
+    width: number;
+    height: number;
+  } | null>(null);
   const [isMorePhotos, setIsMorePhotos] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const onClickImageMoreViewButton = () => {
     setIsMorePhotos(!isMorePhotos);
@@ -21,6 +32,7 @@ export default function PhotoAlbum() {
   useEffect(() => {
     getPhotos().then((photos) => {
       setAlbumInput(photos.albumInput);
+      setGalleryInput(photos.photos);
     });
   }, []);
 
@@ -42,6 +54,10 @@ export default function PhotoAlbum() {
             return 3;
           }}
           spacing={10}
+          onClick={(event) => {
+            setSelectedPhoto(event.photo);
+            setIsOpenModal(!isOpenModal);
+          }}
         />
       </ImageWrapper>
       <MoreViewButtonWrapper $isMoreView={isMorePhotos}>
@@ -56,6 +72,41 @@ export default function PhotoAlbum() {
           )}
         </MoreViewButton>
       </MoreViewButtonWrapper>
+      <Modal
+        open={isOpenModal}
+        onClose={() => {
+          setIsOpenModal(false);
+        }}
+      >
+        <ModalCloseButton
+          id="modal-close-button"
+          onClick={() => {
+            setIsOpenModal(false);
+          }}
+          style={{
+            boxShadow: "none",
+            border: "none",
+            zIndex: "1000",
+          }}
+        >
+          <IoIosClose size={20} color="white" />
+        </ModalCloseButton>
+        <ImageGallery
+          items={galleryInput.map((photo) => ({
+            original: photo.src,
+            thumbnail: photo.src,
+          }))}
+          showThumbnails={true}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          onClick={() => {}}
+          useBrowserFullscreen={false}
+          thumbnailPosition="bottom"
+          startIndex={galleryInput.findIndex(
+            (photo) => photo.src === selectedPhoto?.src
+          )}
+        />
+      </Modal>
     </div>
   );
 }
@@ -149,4 +200,25 @@ const MoreViewButton = styled.button<{ $isMoreView: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const Modal = styled.dialog`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  z-index: 1000;
+`;
+const ModalCloseButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `;
