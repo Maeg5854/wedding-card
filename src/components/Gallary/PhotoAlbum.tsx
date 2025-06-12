@@ -66,9 +66,9 @@ export default function PhotoAlbum() {
           $isMoreView={isMorePhotos}
         >
           {isMorePhotos ? (
-            <IoIosArrowUp size={15} style={{ zIndex: "1" }} />
+            <IoIosArrowUp size={15} style={{ zIndex: "1", color: "black" }} />
           ) : (
-            <IoIosArrowDown size={15} style={{ zIndex: "1" }} />
+            <IoIosArrowDown size={15} style={{ zIndex: "1", color: "black" }} />
           )}
         </MoreViewButton>
       </MoreViewButtonWrapper>

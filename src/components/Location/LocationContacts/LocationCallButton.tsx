@@ -8,7 +8,7 @@ export default function LocationCallButton() {
         window.open("tel:02-2197-0230", "_blank");
       }}
     >
-      <IoCall size={20} />
+      <IoCall size={20} color="black" />
       <div>전화</div>
     </Button>
   );

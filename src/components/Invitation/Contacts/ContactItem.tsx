@@ -20,10 +20,10 @@ export const ContactItem = ({
       </ContactMeta>
       <ContactList>
         <CallButton onClick={() => window.open(`tel:${phone}`)}>
-          <IoCall size={20} />
+          <IoCall size={20} color="black" />
         </CallButton>
         <MessageButton onClick={() => window.open(`sms:${phone}`)}>
-          <TbMessage2 size={20} />
+          <TbMessage2 size={20} color="black" />
         </MessageButton>
       </ContactList>
     </ContactItemContainer>
