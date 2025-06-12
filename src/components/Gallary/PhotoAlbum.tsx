@@ -56,7 +56,7 @@ export default function PhotoAlbum() {
           spacing={10}
           onClick={(event) => {
             setSelectedPhoto(event.photo);
-            setIsOpenModal(!isOpenModal);
+            setIsOpenModal(true);
           }}
         />
       </ImageWrapper>
@@ -72,46 +72,6 @@ export default function PhotoAlbum() {
           )}
         </MoreViewButton>
       </MoreViewButtonWrapper>
-      <Modal
-        open={isOpenModal}
-        onClose={() => {
-          setIsOpenModal(false);
-        }}
-      >
-        <ModalCloseButton
-          id="modal-close-button"
-          onClick={() => {
-            setIsOpenModal(false);
-          }}
-          style={{
-            boxShadow: "none",
-            border: "none",
-            zIndex: "1000",
-          }}
-        >
-          <IoIosClose
-            size={"100%"}
-            color="white"
-            style={{ filter: "drop-shadow(2px 2px 2px rgba(0,0,0,0.3))" }}
-          />
-        </ModalCloseButton>
-        <ImageGallery
-          items={galleryInput.map((photo) => ({
-            original: photo.src,
-            thumbnail: photo.src,
-          }))}
-          showThumbnails={true}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          onClick={() => {}}
-          useBrowserFullscreen={false}
-          thumbnailPosition="bottom"
-          startIndex={galleryInput.findIndex(
-            (photo) => photo.src === selectedPhoto?.src
-          )}
-          infinite={true}
-        />
-      </Modal>
     </div>
   );
 }
@@ -140,6 +100,7 @@ const getPhotos = async () => {
       const dimensions = await getImageDimensions(url);
       return {
         src: url,
+        originalWidth: dimensions.width / 2,
         width: dimensions.width,
         height: dimensions.height,
       };
@@ -211,11 +172,14 @@ const Modal = styled.dialog`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   border: none;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const ModalCloseButton = styled.button`
   position: absolute;
