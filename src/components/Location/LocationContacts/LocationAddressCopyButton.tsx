@@ -10,7 +10,7 @@ export default function LocationCallButton() {
         toast.success("주소가 복사되었습니다.");
       }}
     >
-      <RiFileCopyLine size={20} />
+      <RiFileCopyLine size={20} color="black" />
       <div>주소</div>
     </Button>
   );

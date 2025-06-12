@@ -1,3 +1,4 @@
+"use client";
 import Subtitle from "@/components/common/Subtitle";
 import { AccountItem } from "./AccountItem";
 import CollapsibleList from "../common/CollapsibleList";

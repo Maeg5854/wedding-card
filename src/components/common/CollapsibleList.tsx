@@ -22,7 +22,11 @@ const CollapsibleList = ({
       >
         <span>{title}</span>
         <CollapsibleButton onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <IoIosArrowUp size={15} /> : <IoIosArrowDown size={15} />}
+          {isOpen ? (
+            <IoIosArrowUp size={15} color="black" />
+          ) : (
+            <IoIosArrowDown size={15} color="black" />
+          )}
         </CollapsibleButton>
       </CollapsibleHeaders>
       <Collapse

@@ -30,7 +30,7 @@ export const AccountItem = ({
             toast.success("복사되었습니다.");
           }}
         >
-          <RiFileCopyLine size={13} />
+          <RiFileCopyLine size={13} color="black" />
         </CopyButton>
       </AccountNumber>
     </AccountItemContainer>
