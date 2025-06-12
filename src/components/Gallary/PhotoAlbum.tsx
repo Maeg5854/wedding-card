@@ -7,23 +7,13 @@ import { ColumnsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/columns.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import styled from "styled-components";
-import { IoIosArrowDown, IoIosArrowUp, IoIosClose } from "react-icons/io";
-import ImageGallery from "react-image-gallery";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export default function PhotoAlbum() {
   const [albumInput, setAlbumInput] = useState<
     { src: string; width: number; height: number }[]
   >([]);
-  const [galleryInput, setGalleryInput] = useState<
-    { src: string; width: number; height: number }[]
-  >([]);
-  const [selectedPhoto, setSelectedPhoto] = useState<{
-    src: string;
-    width: number;
-    height: number;
-  } | null>(null);
   const [isMorePhotos, setIsMorePhotos] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const onClickImageMoreViewButton = () => {
     setIsMorePhotos(!isMorePhotos);
@@ -32,7 +22,6 @@ export default function PhotoAlbum() {
   useEffect(() => {
     getPhotos().then((photos) => {
       setAlbumInput(photos.albumInput);
-      setGalleryInput(photos.photos);
     });
   }, []);
 
@@ -54,10 +43,6 @@ export default function PhotoAlbum() {
             return 3;
           }}
           spacing={10}
-          onClick={(event) => {
-            setSelectedPhoto(event.photo);
-            setIsOpenModal(true);
-          }}
         />
       </ImageWrapper>
       <MoreViewButtonWrapper $isMoreView={isMorePhotos}>
@@ -166,28 +151,4 @@ const MoreViewButton = styled.button<{ $isMoreView: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const Modal = styled.dialog`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-const ModalCloseButton = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5vw;
-  height: 5vw;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 `;
