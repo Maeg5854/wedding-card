@@ -7,12 +7,14 @@ import { ToastContainer } from "react-toastify";
 import { Notice } from "@/components/Notice";
 import Account from "@/components/Account";
 import Gallary from "@/components/Gallary";
+import Conver from "@/components/Conver";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <ToastContainer />
       <main className={styles.main}>
+        <Conver />
         <Invitation />
         <Date />
         <Location />
