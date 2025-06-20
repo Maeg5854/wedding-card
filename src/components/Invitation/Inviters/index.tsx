@@ -5,9 +5,9 @@ import Image from "next/image";
 export const BrideInviters = () => {
   return (
     <Inviters
-      name="김혜린"
-      fatherName="김용배"
-      motherName="홍수정"
+      name={process.env.NEXT_PUBLIC_BRIDE_NAME || ""}
+      fatherName={process.env.NEXT_PUBLIC_BRIDE_FATHER_NAME || ""}
+      motherName={process.env.NEXT_PUBLIC_BRIDE_MOTHER_NAME || ""}
       position="bride"
     />
   );
@@ -16,9 +16,9 @@ export const BrideInviters = () => {
 export const GroomInviters = () => {
   return (
     <Inviters
-      name="전덕기"
-      fatherName="전준호"
-      motherName="이영희"
+      name={process.env.NEXT_PUBLIC_GROOM_NAME || ""}
+      fatherName={process.env.NEXT_PUBLIC_GROOM_FATHER_NAME || ""}
+      motherName={process.env.NEXT_PUBLIC_GROOM_MOTHER_NAME || ""}
       position="groom"
     />
   );
