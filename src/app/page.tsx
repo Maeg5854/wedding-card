@@ -10,7 +10,14 @@ import Conver from "@/components/Conver";
 
 export default function Home() {
   return (
-    <div>
+    <div
+      style={{
+        alignSelf: "center",
+        padding: "0 calc(50% - 182.5px)",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <ToastContainer />
       <main className={styles.main}>
         <Conver />

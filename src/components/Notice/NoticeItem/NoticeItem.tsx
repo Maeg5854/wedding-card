@@ -26,4 +26,6 @@ const NoticeItemContent = styled.div`
   font-family: "SeoulHangangCL";
   font-size: 14px;
   text-align: center;
+  white-space: pre-line;
+  line-height: 0;
 `;
