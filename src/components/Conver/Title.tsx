@@ -1,9 +1,10 @@
-export default function ConverTitle() {
+export default function ConverTitle({ style }: { style: React.CSSProperties }) {
   return (
     <div
       style={{
         fontFamily: "EphesisRegular",
         fontSize: "100px",
+        ...style,
       }}
     >
       <div

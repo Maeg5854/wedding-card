@@ -1,8 +1,9 @@
 "use client";
 import ConverTitle from "./Title";
-import CoverPhotoFrame from "./ConverPhotoFrame";
+import CoverPhotoFrame from "./CoverPhotoFrame";
 import { ImageRepository } from "@/app/repository/ImageRepository";
 import { useEffect, useState } from "react";
+import Summary from "./Summary";
 
 export default function Conver() {
   const [cover, setCover] = useState<string | null>(null);
@@ -17,12 +18,21 @@ export default function Conver() {
     return <div>Loading...</div>;
   }
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <ConverTitle />
-      <CoverPhotoFrame
-        style={{ position: "relative", top: "-100px", zIndex: -1 }}
-        src={cover}
-      />
+    <div
+      style={{
+        width: "100%",
+        height: "812px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "50px",
+        alignItems: "center",
+      }}
+    >
+      <div>
+        <ConverTitle style={{ height: "100px" }} />
+        <CoverPhotoFrame src={cover} />
+      </div>
+      <Summary />
     </div>
   );
 }
