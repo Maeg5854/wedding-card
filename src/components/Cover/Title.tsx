@@ -1,4 +1,4 @@
-export default function ConverTitle({ style }: { style: React.CSSProperties }) {
+export default function CoverTitle({ style }: { style: React.CSSProperties }) {
   return (
     <div
       style={{

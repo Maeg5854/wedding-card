@@ -1,11 +1,11 @@
 "use client";
-import ConverTitle from "./Title";
+import CoverTitle from "./Title";
 import CoverPhotoFrame from "./CoverPhotoFrame";
 import { ImageRepository } from "@/app/repository/ImageRepository";
 import { useEffect, useState } from "react";
 import Summary from "./Summary";
 
-export default function Conver() {
+export default function Cover() {
   const [cover, setCover] = useState<string | null>(null);
   useEffect(() => {
     ImageRepository.getInstance()
@@ -29,7 +29,7 @@ export default function Conver() {
       }}
     >
       <div>
-        <ConverTitle style={{ height: "100px" }} />
+        <CoverTitle style={{ height: "100px" }} />
         <CoverPhotoFrame src={cover} />
       </div>
       <Summary />

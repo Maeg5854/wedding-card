@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import { Notice } from "@/components/Notice";
 import Account from "@/components/Account";
 import Gallary from "@/components/Gallary";
-import Conver from "@/components/Conver";
+import Cover from "@/components/Cover";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
     >
       <ToastContainer />
       <main className={styles.main}>
-        <Conver />
+        <Cover />
         <Invitation />
         <Date />
         <Location />
