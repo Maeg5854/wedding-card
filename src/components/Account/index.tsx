@@ -4,7 +4,7 @@ import { AccountItem } from "./AccountItem";
 import CollapsibleList from "../common/CollapsibleList";
 
 export default function Account({}) {
-  const descriptions = "축하의 마음을 담아 축의금을 전달해보세요.";
+  // const descriptions = "축하의 마음을 담아 축의금을 전달해보세요.";
   return (
     <div
       style={{
@@ -15,9 +15,9 @@ export default function Account({}) {
       }}
     >
       <Subtitle text="Account" />
-      <div style={{ fontFamily: "SeoulHangangCL", fontSize: "14px" }}>
+      {/* <div style={{ fontFamily: "SeoulHangangCL", fontSize: "14px" }}>
         {descriptions}
-      </div>
+      </div> */}
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <GroomAccounts />
         <BrideAccounts />

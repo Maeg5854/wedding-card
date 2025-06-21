@@ -6,12 +6,20 @@ export function NoticeItem({
   noticeContentText,
 }: {
   noticeHeaderText: string;
-  noticeContentText: string;
+  noticeContentText: string | string[];
 }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
       <NoticeItemHeader>{noticeHeaderText}</NoticeItemHeader>
-      <NoticeItemContent>{noticeContentText}</NoticeItemContent>
+      <div>
+        {Array.isArray(noticeContentText) ? (
+          noticeContentText.map((text, idx) => (
+            <NoticeItemList key={idx}>{text}</NoticeItemList>
+          ))
+        ) : (
+          <NoticeItemContent>{noticeContentText}</NoticeItemContent>
+        )}
+      </div>
     </div>
   );
 }
@@ -27,5 +35,16 @@ const NoticeItemContent = styled.div`
   font-size: 14px;
   text-align: center;
   white-space: pre-line;
-  line-height: 0;
+  line-height: 1.5;
+`;
+
+const NoticeItemList = styled.li`
+  font-size: 14px;
+  font-family: "SeoulHangangCL";
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 0 20px;
+  list-style-position: outside;
+  list-style-type: disc;
 `;
