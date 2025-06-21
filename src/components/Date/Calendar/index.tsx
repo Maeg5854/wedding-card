@@ -6,7 +6,7 @@ import "react-calendar/dist/Calendar.css";
 import styled from "styled-components";
 
 export default function WeddingDateCalendar() {
-  const weddingDate = dayjs("2025-08-23 16:30").locale("ko");
+  const weddingDate = dayjs("2025-08-23 16:00").locale("ko");
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "33px" }}>
       <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>

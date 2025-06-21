@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Summary() {
   const location = "아펠가모 공덕 마리에홀";
-  const datetime = dayjs("2025-08-23T16:30");
+  const datetime = dayjs("2025-08-23T16:00");
   return (
     <SummaryContainer>
       <SummaryContent>{location}</SummaryContent>
