@@ -21,7 +21,6 @@ export default function Cover() {
     <div
       style={{
         width: "100%",
-        height: "812px",
         display: "flex",
         flexDirection: "column",
         gap: "50px",
