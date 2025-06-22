@@ -19,7 +19,10 @@ export default function Home() {
       }}
     >
       <ToastContainer />
-      <main className={styles.main}>
+      <main
+        className={styles.main}
+        style={{ display: "flex", flexDirection: "column", gap: "77px" }}
+      >
         <Cover />
         <Invitation />
         <Date />
