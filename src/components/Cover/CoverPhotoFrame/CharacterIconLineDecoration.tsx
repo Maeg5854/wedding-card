@@ -12,8 +12,10 @@ export default function CharacterIconLineDecoration({
         ...style,
         display: "flex",
         flexDirection: "row",
+        alignItems: "center",
         justifyContent: "space-between",
         padding: "0 10px",
+        gap: 10,
       }}
     >
       <Image
@@ -24,16 +26,16 @@ export default function CharacterIconLineDecoration({
       />
       <svg
         width="100%"
-        height="24"
-        viewBox="0 0 200 24"
+        height="36"
+        viewBox="0 0 100% 36"
         style={{ display: "block" }}
       >
-        <line x1="0" y1="12" x2="200" y2="12" stroke="white" strokeWidth="1" />
+        <line x1="0" y1="18" x2="100%" y2="18" stroke="white" strokeWidth="1" />
         <PiHeartLight
           style={{
             position: "absolute",
-            left: 50,
-            top: 0,
+            transform: "translateX(calc(50% - 10px))",
+            zIndex: 1,
           }}
           size={20}
           color="white"

@@ -11,7 +11,7 @@ export default function CoverPhotoFrame({ src }: { src: string }) {
         style={{ width: "300px", height: "400px" }}
       >
         <CharacterIconLineDecoration
-          style={{ position: "relative", bottom: "35px", zIndex: 1 }}
+          style={{ position: "relative", bottom: "45px", zIndex: 1 }}
         />
       </ArchWindowPhotoFrame>
     </div>
