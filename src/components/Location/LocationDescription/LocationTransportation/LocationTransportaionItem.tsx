@@ -26,16 +26,16 @@ export function LocationTransportaionItem({
 
 const LocationTransportaionItemHeader = styled.div`
   font-family: "SeoulHangangCB";
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 `;
 const LocationTransportaionItemDescription = styled.li`
-  font-size: 12px;
+  font-size: 14px;
   font-family: "SeoulHangangCL";
   white-space: pre-line;
   text-align: left;
   line-height: 1.5;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 5px;
   list-style-position: outside;
   list-style-type: disc;
 `;
