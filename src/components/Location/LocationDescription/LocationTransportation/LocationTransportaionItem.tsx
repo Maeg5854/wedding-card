@@ -8,7 +8,14 @@ export function LocationTransportaionItem({
   descriptions: string[];
 }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "6px",
+        padding: "0 10px",
+      }}
+    >
       <LocationTransportaionItemHeader>{title}</LocationTransportaionItemHeader>
       {descriptions.map((item) => (
         <LocationTransportaionItemDescription
