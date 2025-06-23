@@ -43,6 +43,7 @@ export enum LocationMapDirectDvcd {
 const LocationMapDirectIconContainer = styled.div`
   display: flex;
   gap: 4px;
-  font-family: "SeoulNamsanCB";
-  vertical-align: middle;
+  font-size: 14px;
+  font-family: "SeoulNamsanCL";
+  align-items: center;
 `;

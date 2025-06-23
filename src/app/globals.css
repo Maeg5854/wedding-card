@@ -34,6 +34,12 @@
   src: url("/fonts/EphesisRegular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "SeoulNamsanCL";
+  font-weight: 50;
+  src: url("/fonts/SeoulNamsanCL.ttf") format("truetype");
+}
+
 html,
 body {
   max-width: 100vw;
