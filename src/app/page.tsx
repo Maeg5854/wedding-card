@@ -13,7 +13,9 @@ export default function Home() {
     <div
       style={{
         alignSelf: "center",
-        padding: "0 calc(50% - 182.5px)",
+        margin: "0 calc(50% - 182.5px)",
+        padding: "0 30px",
+        backgroundColor: "white",
         flexDirection: "column",
         alignItems: "center",
       }}
