@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PiHeartLight } from "react-icons/pi";
 
 export default function CharacterIconLineDecoration({
   style,
