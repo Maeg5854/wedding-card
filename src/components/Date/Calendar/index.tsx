@@ -62,6 +62,10 @@ const Calendar = styled(_Calendar)`
     color: black;
   }
 
+  .react-calendar__month-view__days__day {
+    color: black;
+  }
+
   .react-calendar__tile--active {
     background: #e79b9b !important;
     border-radius: 50%;
