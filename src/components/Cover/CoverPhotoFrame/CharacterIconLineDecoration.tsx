@@ -24,22 +24,15 @@ export default function CharacterIconLineDecoration({
         height={22}
         alt="damgomi"
       />
-      <svg
-        width="100%"
-        height="36"
-        viewBox="0 0 100% 36"
-        style={{ display: "block" }}
-      >
+      <svg width="calc(100% - 50px)" height="36" style={{ display: "block" }}>
         <line x1="0" y1="18" x2="100%" y2="18" stroke="white" strokeWidth="1" />
-        <PiHeartLight
-          style={{
-            position: "absolute",
-            transform: "translateX(calc(50% - 10px))",
-            zIndex: 1,
-          }}
+        {/* <PiHeartLight
           size={20}
           color="white"
-        />
+          style={{
+            transform: "translateX(-50%)",
+          }}
+        /> */}
       </svg>
       <Image
         src={"/images/damgomi_white.png"}
