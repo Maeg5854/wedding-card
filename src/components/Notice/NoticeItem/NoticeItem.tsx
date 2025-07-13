@@ -44,7 +44,8 @@ const NoticeItemList = styled.li`
   white-space: pre-line;
   text-align: left;
   line-height: 1.5;
-  margin: 0 0 0 20px;
+  padding: 0 10px;
+  margin: 0 0 0 5px;
   list-style-position: outside;
   list-style-type: disc;
 `;

@@ -8,7 +8,14 @@ export function LocationTransportaionItem({
   descriptions: string[];
 }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "6px",
+        padding: "0 10px",
+      }}
+    >
       <LocationTransportaionItemHeader>{title}</LocationTransportaionItemHeader>
       {descriptions.map((item) => (
         <LocationTransportaionItemDescription
@@ -26,16 +33,16 @@ export function LocationTransportaionItem({
 
 const LocationTransportaionItemHeader = styled.div`
   font-family: "SeoulHangangCB";
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 `;
 const LocationTransportaionItemDescription = styled.li`
-  font-size: 12px;
+  font-size: 14px;
   font-family: "SeoulHangangCL";
   white-space: pre-line;
   text-align: left;
   line-height: 1.5;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 5px;
   list-style-position: outside;
   list-style-type: disc;
 `;

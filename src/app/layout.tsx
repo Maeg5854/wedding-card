@@ -34,7 +34,10 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        style={{ backgroundColor: "#F7F7F7" }}
+      >
         {children}
       </body>
     </html>

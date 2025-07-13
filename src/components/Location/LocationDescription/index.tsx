@@ -6,8 +6,18 @@ import { LocationTransportation } from "./LocationTransportation";
 export default function LocationDescription() {
   return (
     <>
-      <LocationMap />
-      <LocationMapDirect />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          width: "100%",
+          alignItems: "center",
+        }}
+      >
+        <LocationMap />
+        <LocationMapDirect />
+      </div>
       <LocationTransportation />
     </>
   );

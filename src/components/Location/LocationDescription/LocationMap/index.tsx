@@ -9,8 +9,9 @@ export default function LocationMap() {
       center={position}
       style={{
         width: "100%",
-        height: "300px",
-        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)",
+        height: "250px",
+        borderRadius: "10px",
+        border: "1px solid #DDDDDD",
       }}
       level={3}
     >

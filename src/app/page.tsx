@@ -6,21 +6,26 @@ import { ToastContainer } from "react-toastify";
 import { Notice } from "@/components/Notice";
 import Account from "@/components/Account";
 import Gallary from "@/components/Gallary";
-import Conver from "@/components/Conver";
+import Cover from "@/components/Cover";
 
 export default function Home() {
   return (
     <div
       style={{
         alignSelf: "center",
-        padding: "0 calc(50% - 182.5px)",
+        margin: "0 calc(50% - 182.5px)",
+        padding: "0 30px",
+        backgroundColor: "white",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
       <ToastContainer />
-      <main className={styles.main}>
-        <Conver />
+      <main
+        className={styles.main}
+        style={{ display: "flex", flexDirection: "column", gap: "77px" }}
+      >
+        <Cover />
         <Invitation />
         <Date />
         <Location />

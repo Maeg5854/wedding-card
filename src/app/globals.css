@@ -3,13 +3,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @font-face {
   font-family: "SeoulHangangCL";
   font-weight: 50;
@@ -32,6 +25,12 @@
   font-family: "EphesisRegular";
   font-weight: 50;
   src: url("/fonts/EphesisRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SeoulNamsanCL";
+  font-weight: 50;
+  src: url("/fonts/SeoulNamsanCL.ttf") format("truetype");
 }
 
 html,
@@ -57,10 +56,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
