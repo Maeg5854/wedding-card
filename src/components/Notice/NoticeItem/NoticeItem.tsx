@@ -38,14 +38,12 @@ const NoticeItemContent = styled.div`
   line-height: 1.5;
 `;
 
-const NoticeItemList = styled.li`
+const NoticeItemList = styled.div`
   font-size: 14px;
   font-family: "SeoulHangangCL";
   white-space: pre-line;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   padding: 0 10px;
   margin: 0 0 0 5px;
-  list-style-position: outside;
-  list-style-type: disc;
 `;

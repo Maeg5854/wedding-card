@@ -5,7 +5,11 @@ export function LocationTransportation() {
   const transportations = [
     {
       title: "자가용 안내",
-      description: ["효성헤링턴 민영 주차장에 주차", "무료 주차"],
+      description: [
+        "효성해링턴스퀘어 B동 주차장으로 오시면, 아펠가모 공덕 주차 요원의 안내에 따라 주차하실 수 있습니다.",
+        "주차장 만차 시, 외부 주차장 (도보 5분)으로 안내 예정입니다.",
+        "피로연장에서 <b>2시간 무료 주차 주차권</b>을 받아가실 수 있습니다.",
+      ],
     },
     {
       title: "버스 안내",

@@ -24,7 +24,7 @@ export function LocationTransportaionItem({
             marginBottom: "0px",
           }}
         >
-          {item}
+          <span dangerouslySetInnerHTML={{ __html: item }} />
         </LocationTransportaionItemDescription>
       ))}
     </div>
