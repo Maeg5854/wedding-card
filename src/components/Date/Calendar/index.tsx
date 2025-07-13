@@ -11,7 +11,7 @@ export default function WeddingDateCalendar() {
     <div style={{ display: "flex", flexDirection: "column", gap: "33px" }}>
       <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
         <WeddingDate>{weddingDate.format("YYYY년 MM월 DD일")}</WeddingDate>
-        <WddingTime>{weddingDate.format("dddd A HH시 mm분")}</WddingTime>
+        <WddingTime>{weddingDate.format("dddd A h시")}</WddingTime>
       </div>
       <Calendar
         value={weddingDate.toDate()}
