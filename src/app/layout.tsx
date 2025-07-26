@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon_.ico",
   },
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://www.urinvited.today"),
   openGraph: {
-    url: "http://localhost:3000",
+    url: "https://www.urinvited.today",
     siteName: "전현준 🤍 김혜린 결혼합니다.",
     title: "전현준 🤍 김혜린 결혼합니다.",
     description: "2025년 8월 20일(토) 오후 4시\n아펠가모 공덕 마리에홀",
