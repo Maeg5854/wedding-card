@@ -24,6 +24,92 @@ export const GroomInviters = () => {
   );
 };
 
+export const InvitersTable = () => {
+  return (
+    <InvitersContainer>
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <tbody>
+          <tr>
+            <td style={{ textAlign: "left", verticalAlign: "middle" }}>
+              <ParentsContainer>
+                <Inviter>
+                  {process.env.NEXT_PUBLIC_GROOM_FATHER_NAME || ""}
+                </Inviter>
+                <MiddleText>{"·"}</MiddleText>
+                <Inviter>
+                  {process.env.NEXT_PUBLIC_GROOM_MOTHER_NAME || ""}
+                </Inviter>
+              </ParentsContainer>
+            </td>
+            <td
+              style={{
+                textAlign: "center",
+                verticalAlign: "middle",
+                width: "10px",
+              }}
+            >
+              <MiddleText>{"의"}</MiddleText>
+            </td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Position>아들</Position>
+            </td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Inviter>{process.env.NEXT_PUBLIC_GROOM_NAME || ""}</Inviter>
+            </td>
+            <td style={{ textAlign: "right", verticalAlign: "middle" }}>
+              <Image
+                src="/images/metamong.png"
+                width={20}
+                height={17}
+                alt="metamong"
+                priority
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style={{ textAlign: "left", verticalAlign: "middle" }}>
+              <ParentsContainer>
+                <Inviter>
+                  {process.env.NEXT_PUBLIC_BRIDE_FATHER_NAME || ""}
+                </Inviter>
+                <MiddleText>{"·"}</MiddleText>
+                <Inviter>
+                  {process.env.NEXT_PUBLIC_BRIDE_MOTHER_NAME || ""}
+                </Inviter>
+              </ParentsContainer>
+            </td>
+            <td>
+              <MiddleText>{"의"}</MiddleText>
+            </td>
+            <td
+              style={{
+                textAlign: "center",
+                verticalAlign: "middle",
+                width: "10px",
+              }}
+            ></td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Position>딸</Position>
+            </td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Inviter>{process.env.NEXT_PUBLIC_BRIDE_NAME || ""}</Inviter>
+            </td>
+            <td style={{ textAlign: "right", verticalAlign: "middle" }}>
+              <Image
+                src="/images/damgomi.png"
+                width={20}
+                height={17}
+                alt="damgomi"
+                priority
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </InvitersContainer>
+  );
+};
+
 const Inviters = ({
   name,
   fatherName,
@@ -37,36 +123,46 @@ const Inviters = ({
 }) => {
   return (
     <InvitersContainer>
-      <ParentsContainer>
-        <Inviter>{fatherName}</Inviter>
-        <MiddleText>{"·"}</MiddleText>
-        <Inviter>{motherName}</Inviter>
-        <MiddleText>{"의"}</MiddleText>
-      </ParentsContainer>
-      <Position>{position == "groom" ? "아들" : "딸"}</Position>
-      <Inviter>{name}</Inviter>
-      <Image
-        src={
-          position == "groom" ? "/images/metamong.png" : "/images/damgomi.png"
-        }
-        width={20}
-        height={17}
-        alt="damgomi"
-        priority
-        style={{ alignSelf: "end" }}
-      />
+      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <tbody>
+          <tr>
+            <td style={{ textAlign: "left", verticalAlign: "middle" }}>
+              <ParentsContainer>
+                <Inviter>{fatherName}</Inviter>
+                <MiddleText>{"·"}</MiddleText>
+                <Inviter>{motherName}</Inviter>
+                <MiddleText>{"의"}</MiddleText>
+              </ParentsContainer>
+            </td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Position>{position == "groom" ? "아들" : "딸"}</Position>
+            </td>
+            <td style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Inviter>{name}</Inviter>
+            </td>
+            <td style={{ textAlign: "right", verticalAlign: "middle" }}>
+              <Image
+                src={
+                  position == "groom"
+                    ? "/images/metamong.png"
+                    : "/images/damgomi.png"
+                }
+                width={20}
+                height={17}
+                alt="damgomi"
+                priority
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </InvitersContainer>
   );
 };
 
 const InvitersContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   color: #000000;
   width: 200px;
-  gap: 10px;
 `;
 
 const Inviter = styled.div`

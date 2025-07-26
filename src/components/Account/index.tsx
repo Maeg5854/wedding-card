@@ -57,7 +57,7 @@ const GroomAccounts = () => {
     },
   ];
   return (
-    <CollapsibleList title="신랑 측">
+    <CollapsibleList title="신랑 측 계좌번호">
       {accounts.map((account, index) => (
         <AccountItem
           key={index}
@@ -93,7 +93,7 @@ const BrideAccounts = () => {
     },
   ];
   return (
-    <CollapsibleList title="신부 측">
+    <CollapsibleList title="신부 측 계좌번호">
       {accounts.map((account, index) => (
         <AccountItem
           key={index}
