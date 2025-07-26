@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import Subtitle from "../common/Subtitle";
 import { GroomContacts, BrideContacts } from "./Contacts";
-import { BrideInviters, GroomInviters } from "./Inviters";
+import { InvitersTable } from "./Inviters";
 import { Letter } from "./Letter";
 
 export default function Invitation() {
@@ -11,10 +11,7 @@ export default function Invitation() {
       <Subtitle text="Invitation" />
       <Letter />
       <VerticalLine />
-      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-        <GroomInviters />
-        <BrideInviters />
-      </div>
+      <InvitersTable />
       <div style={{ display: "flex", flexDirection: "column", gap: "13px" }}>
         <GroomContacts />
         <BrideContacts />
